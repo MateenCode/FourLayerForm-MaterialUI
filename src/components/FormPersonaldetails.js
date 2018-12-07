@@ -3,6 +3,7 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
+import Paper from '@material-ui/core/Paper';
 
 export class FormPersonalDetails extends Component {
   continue = e => {
@@ -21,6 +22,7 @@ export class FormPersonalDetails extends Component {
       <MuiThemeProvider>
         <React.Fragment>
           <AppBar title="Enter Personal Detail" />
+          <Paper className="paper">
           <TextField
             hintText="Enter Your Occupation"
             floatingLabelText="Occupation"
@@ -54,6 +56,7 @@ export class FormPersonalDetails extends Component {
             style={styles.button}
             onClick={this.continue}
           />
+           </Paper>
         </React.Fragment>
       </MuiThemeProvider>
     );

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import AppBar from "material-ui/AppBar";
-
+import Paper from '@material-ui/core/Paper';
 
 export class Success extends Component {
   continue = e => {
@@ -14,8 +14,10 @@ export class Success extends Component {
       <MuiThemeProvider>
         <React.Fragment>
           <AppBar title="Success" />
+          <Paper className="paper">
             <h1>Thank You For Your Submission</h1>
                 <p>Someone will be with you as soon as possible</p>
+            </Paper>
         </React.Fragment>
       </MuiThemeProvider>
     );
