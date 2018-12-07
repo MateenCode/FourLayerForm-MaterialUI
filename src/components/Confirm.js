@@ -17,31 +17,41 @@ export class Confirm extends Component {
   };
 
   render() {
-    const { values, handleChange } = this.props;
+    const { values: { firstName, lastName, email, occupation, city, bio} } = this.props;
     return (
       <MuiThemeProvider>
         <React.Fragment>
-          <AppBar title="Enter Personal Detail" />
-          <TextField
-            hintText="Enter Your Occupation"
-            floatingLabelText="Occupation"
-            onChange={handleChange("occupation")}
-            defaultValue={values.occupation}
-          />
-          <br />
-          <TextField
-            hintText="Enter Your City"
-            floatingLabelText="City"
-            onChange={handleChange("city")}
-            defaultValue={values.city}
-          />
-          <br />
-          <TextField
-            hintText="Enter Your Bio"
-            floatingLabelText="Bio"
-            onChange={handleChange("bio")}
-            defaultValue={values.bio}
-          />
+          <AppBar title="Confirm User Data" />
+          
+            <List>
+            <ListItem
+                    primaryText="First Name"
+                    secondaryText={ firstName }
+                /> 
+                <ListItem
+                    primaryText="Last Name"
+                    secondaryText={ lastName }
+                /> 
+                <ListItem
+                    primaryText="Email"
+                    secondaryText={ email }
+                /> 
+                <ListItem
+                    primaryText="Occupation"
+                    secondaryText={ occupation }
+                /> 
+                <ListItem
+                    primaryText="City"
+                    secondaryText={ city }
+                /> 
+                <ListItem
+                    primaryText="Bio"
+                    secondaryText={ bio }
+                /> 
+            </List>
+
+
+
            <br />
            <RaisedButton
             label="Back"
@@ -50,7 +60,7 @@ export class Confirm extends Component {
             onClick={this.back}
           />  
           <RaisedButton
-            label="Continue"
+            label="Confirm & Continue"
             primary={true}
             style={styles.button}
             onClick={this.continue}
